@@ -1,21 +1,26 @@
 <template>
-  <div>{{msg}}</div>
+  <div class="hello" style="margin-top:20px">
+    我是子组件计数器：
+    <button @click="addClick">{{ state.count }}</button>
+  </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-
-@Options({
-  props: {
-    msg: String,
-  },
-})
-export default class HelloWorld extends Vue {
-  msg!: string;
-}
+import { defineComponent, reactive } from "vue";
+export default defineComponent({
+  setup() {
+    const state = reactive({
+      count: 0
+    });
+    const addClick = () => {
+      state.count++;
+    };
+    return {
+      state,
+      addClick
+    };
+  }
+});
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>

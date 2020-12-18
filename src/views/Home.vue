@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <HelloWorld msg="hello world" />
+    <HelloWorld msg="hell333o world" />
+    <van-button type="primary" size="large">大号按钮</van-button>
   </div>
 </template>
 
