@@ -17,11 +17,30 @@ const path = require("path");
 function resolve(dir) {
   return path.join(__dirname, dir);
 }
+const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
+  outputDir: 'dist',
+  assetsDir: 'static',
   parallel: false,
+  lintOnSave: isDev,
+  devServer: {
+    open: true,
+    proxy: {
+      '/mall/*': {
+        // target: 'http://wanji.wandianzhang.com', //正式
+        target: 'http://wanjidev.wandianzhang.com', // 测试服地址
+        // target: "http://172.16.3.86:8798",        //陆帅宇本地
+        // target: 'http://172.17.15.172:8798',      //陆帅宇本地 mac
+        // target: 'http://172.17.1.137:8798', // 李文本地
+        // target: "http://172.17.1.90:8798",        // 标哥本地
+        changeOrigin: true,
+      },
+    },
+  },
   //配置路径别名
   configureWebpack: {
+    devtool: isDev ? 'eval-source-map' : 'nosources-source-map',
     resolve: {
       alias: {
         "@": resolve("src"),
@@ -62,5 +81,6 @@ module.exports = {
           }
       }
     }
-  }
+  },
+  transpileDependencies: ['vuex-module-decorators']
 };

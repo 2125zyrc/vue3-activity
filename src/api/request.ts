@@ -15,13 +15,13 @@ const postForm = async(url: string, params: object)=>{
   const res = await axios.post(url, qs.stringify(params));
   return res;
 }
-const q = {
+const req = {
   get,
   post,
   postForm
 }
 
-export default q
+export default req
 export { 
   get,
   post,

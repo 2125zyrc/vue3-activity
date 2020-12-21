@@ -7,6 +7,8 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from "vue";
+import { testStore } from '@/store/modules/test'
+
 export default defineComponent({
   setup() {
     const state = reactive({
@@ -15,6 +17,11 @@ export default defineComponent({
     const addClick = () => {
       state.count++;
     };
+
+    console.log('store', testStore.str)
+    testStore.mutTest('ds')
+    console.log('store',testStore)
+    console.log('store222',testStore.str)
     return {
       state,
       addClick
