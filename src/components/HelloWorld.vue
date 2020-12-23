@@ -7,10 +7,9 @@
 
 <script lang="ts">
 import { defineComponent, reactive } from "vue";
-import { testStore } from '@/store/modules/test'
 
 export default defineComponent({
-  async setup() {
+  setup() {
     const state = reactive({
       count: 0
     });
@@ -18,8 +17,6 @@ export default defineComponent({
       state.count++;
     };
 
-    console.log('store222',testStore)
-    const res = await testStore.actionTest()
     return {
       state,
       addClick
