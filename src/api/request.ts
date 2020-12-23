@@ -1,19 +1,18 @@
-import axios from './axios';
-import qs from 'qs'
+import axios,{ responseFormat } from './axios';
+import qs from 'qs';
 
-const get =  async(url: string, params: object)=>{
-  const res = await axios.get(url, { params});
-  return res;
+type PromiseResponse = Promise<responseFormat>
+
+const get =  async<T>(url: string, params: object): PromiseResponse=>{
+  return await axios.get(url, { params});
 }
 
-const post =  async(url: string, params: object)=>{
-  const res = await axios.post(url, { params});
-  return res;
+const post =  async(url: string, params: object):PromiseResponse=>{
+  return await axios.post(url, { params});
 }
 
-const postForm = async(url: string, params: object)=>{
-  const res = await axios.post(url, qs.stringify(params));
-  return res;
+const postForm = async(url: string, params: object):PromiseResponse=>{
+  return await axios.post(url, qs.stringify(params));
 }
 const req = {
   get,
@@ -25,5 +24,6 @@ export default req
 export { 
   get,
   post,
-  postForm
+  postForm,
+  responseFormat
 }

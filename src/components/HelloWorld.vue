@@ -10,7 +10,7 @@ import { defineComponent, reactive } from "vue";
 import { testStore } from '@/store/modules/test'
 
 export default defineComponent({
-  setup() {
+  async setup() {
     const state = reactive({
       count: 0
     });
@@ -18,10 +18,8 @@ export default defineComponent({
       state.count++;
     };
 
-    console.log('store', testStore.str)
-    testStore.mutTest('ds')
-    console.log('store',testStore)
-    console.log('store222',testStore.str)
+    console.log('store222',testStore)
+    const res = await testStore.actionTest()
     return {
       state,
       addClick

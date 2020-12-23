@@ -13,6 +13,7 @@ interface responseFormat <T = any>{
   message: string,
 }
 
+
 service.interceptors.request.use(async (config: AxiosRequestConfig) => {
   const ticket = getToken();
   if(ticket){
@@ -32,15 +33,21 @@ service.interceptors.response.use(
     if (!data.isError && data.code === '0') {
       return Promise.resolve(response.data)
     } else {
-      return Promise.reject(new Error(data.message))
+      console.error('message', data.message)
+      // return Promise.reject(new Error(data.message))
     }
   },
   /** 请求无响应 */
   (error: AxiosError) => {
-    let err: string = error.message || ''
-    return Promise.reject(err);
+    console.error('message', error.message)
+    // let err: string = error.message || ''
+    // return Promise.reject(err);
   }
 )
 
 
 export default service
+
+export {
+  responseFormat
+}
