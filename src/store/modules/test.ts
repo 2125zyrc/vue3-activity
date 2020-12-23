@@ -1,7 +1,6 @@
 import  store from '../index'
-import api from '@/api/index/index'
+import api from '@/api/test'
 import { VuexModule, Module, getModule, Mutation, Action } from 'vuex-module-decorators';
-import { post } from '@/api/request';
 
 @Module({ namespaced: true, dynamic: true, store, name: 'test'})
 export default class Test extends VuexModule {

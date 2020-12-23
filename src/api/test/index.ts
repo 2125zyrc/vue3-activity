@@ -1,5 +1,5 @@
 import req from '../request'
-import { goodsListModal } from './modal/index'
+import { goodsListModal } from './model'
 
 export default {
   async getGoodsList(data: object):Promise<goodsListModal>{

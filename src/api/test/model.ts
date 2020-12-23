@@ -1,4 +1,4 @@
-import {responseFormat} from '../../request'
+import {responseFormat} from '../request'
 
 interface goodsListItem{
   categoryName: string,
