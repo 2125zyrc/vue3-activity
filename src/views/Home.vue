@@ -1,9 +1,10 @@
 <template>
   <div class="home">
-    <hello-world msg="hell333o world" />
+  dsjdk
+    <!-- <hello-world msg="hell333o world" /> -->
     <!-- <goods-list /> -->
-    <van-button type="primary" size="large">大号按钮</van-button>
-    <component :is="'GoodsList'"/>
+    <!-- <van-button type="primary" size="large">大号按钮</van-button>
+    <component :is="'GoodsList'"/> -->
   </div>
 </template>
 
@@ -22,3 +23,10 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="scss">
+.home {
+  width: 375px;
+  background: red;
+  margin: 0 auto;
+}
+</style>

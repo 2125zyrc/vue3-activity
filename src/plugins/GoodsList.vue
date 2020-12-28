@@ -1,6 +1,6 @@
 <template>
   <div>
-    商品组建
+    this is vue3
   </div>
 </template>
 
