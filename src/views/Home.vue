@@ -1,32 +1,22 @@
 <template>
-  <div class="home">
-  dsjdk
-    <!-- <hello-world msg="hell333o world" /> -->
-    <!-- <goods-list /> -->
-    <!-- <van-button type="primary" size="large">大号按钮</van-button>
-    <component :is="'GoodsList'"/> -->
+  <div class="home" style="height: 50px">
+    <components-list />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, defineAsyncComponent } from "vue";
-import useLoadLayout from '@/hooks/useLoadLayout'
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-
+import { defineComponent } from "vue";
+import ComponentsList from "@/components/ComponentsList/index.vue"; // @ is an alias to /src
 
 export default defineComponent({
   components: {
-    HelloWorld,
-    ...useLoadLayout()
-    // GoodsList,
-    // GoodsList: defineAsyncComponent(()=> import('@/components/layout/GoodsList.vue')),
+    ComponentsList,
   },
 });
 </script>
 <style lang="scss">
 .home {
   width: 375px;
-  background: red;
   margin: 0 auto;
 }
 </style>

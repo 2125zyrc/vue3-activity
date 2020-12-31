@@ -9,7 +9,9 @@ import {
   NavBar,
   Field,
   ActionSheet,
-  Uploader
+  Uploader,
+  Swipe,
+  SwipeItem
 } from "vant";
 
 const plugins = [
@@ -22,7 +24,9 @@ const plugins = [
   NavBar,
   Field,
   ActionSheet,
-  Uploader
+  Uploader,
+  Swipe,
+  SwipeItem
 ];
 
 export const vantPlugins = {

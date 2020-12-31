@@ -1,17 +1,19 @@
 <template>
   <div>
-    this is goodsList plugin
+    this is coupon plugins
   </div>
 </template>
 
 <script>
-export default {
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   setup () {
     
 
     return {}
   }
-}
+})
 </script>
 
 <style lang="scss" scoped>
