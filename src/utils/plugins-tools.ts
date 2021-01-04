@@ -1,7 +1,7 @@
-import config from '../plugins-config/index' 
+import config,{ configIndex } from '../plugins-config/index' 
 
-const getProps = ()=>{
-  return config.WSwipe.props
+const getProps = (index:configIndex)=>{
+  return config[index].props
 }
 
 export {

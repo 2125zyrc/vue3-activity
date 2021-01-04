@@ -23,6 +23,7 @@ export default defineComponent({
     }
   },
   setup (props) {
+    console.log('dsds',props.options)
     //第一张图片
     const fistImage =computed(()=> (props.options.list[0] ))
     //是否是单张

@@ -15,17 +15,12 @@ export default defineComponent({
   },
   setup () {
     const list = ref([
-      {key:'GoodsList'},
       {key:'Coupon'},
-      {key:'WSwiper', options:{
-        list: [
-        ]
-      }}
+      {key:'WSwipe'}
     ])
 
     list.value.map((item)=>{
       const key = item.key;
-      console.log('key',key)
       item.options = getProps(key)
     })
 
