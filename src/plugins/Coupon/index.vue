@@ -1,19 +1,17 @@
 <template>
   <div>
-    this is coupon plugins
+
   </div>
 </template>
 
 <script>
-import { defineComponent } from 'vue'
-
-export default defineComponent({
+export default {
   setup () {
     
 
     return {}
   }
-})
+}
 </script>
 
 <style lang="scss" scoped>

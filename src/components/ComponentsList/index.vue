@@ -15,8 +15,9 @@ export default defineComponent({
   },
   setup () {
     const list = ref([
+      {key:'WSwipe'},
       {key:'Coupon'},
-      {key:'WSwipe'}
+      {key:'GoodsList'},
     ])
 
     list.value.map((item)=>{

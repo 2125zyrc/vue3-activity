@@ -12,7 +12,7 @@
     </div>
   </div>
 </template>
-
+·
 <script>
 import { computed, defineComponent } from 'vue'
 
@@ -23,11 +23,11 @@ export default defineComponent({
     }
   },
   setup (props) {
-    console.log('dsds',props.options)
+    const { options } = props;
     //第一张图片
-    const fistImage =computed(()=> (props.options.list[0] ))
+    const fistImage =computed(()=> (options.list[0] ))
     //是否是单张
-    const isSingle = computed(() => props.options.list.length <= 1)
+    const isSingle = computed(() => options.list.length <= 1)
 
     return {
       isSingle,

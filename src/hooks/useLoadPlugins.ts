@@ -2,7 +2,7 @@ import {  defineAsyncComponent } from "vue";
 
 const useLoadPlugins =()=>{
   return {
-    GoodsList: defineAsyncComponent(()=>import('@/plugins/GoodsList.vue')),
+    GoodsList: defineAsyncComponent(()=>import('@/plugins/GoodsList/index.vue')),
     WSwipe: defineAsyncComponent(()=>import('@/plugins/WSwipe/index.vue')),
     Coupon: defineAsyncComponent(()=>import('@/plugins/Coupon/index.vue')),
   }
