@@ -25,8 +25,6 @@ export default defineComponent({
       item.options = getProps(key)
     })
 
-
-
     return {
       list,
     }
