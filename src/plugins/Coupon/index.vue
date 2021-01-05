@@ -25,8 +25,9 @@
 </template>
 <script>
   import { defineComponent, ref } from "vue";
-  import { Swiper, SwiperSlide } from 'swiper/vue';
+  import { Swiper, SwiperSlide } from 'swiper/vue'; //swiper 6.x版本
   import 'swiper/swiper.scss';
+  
   export default defineComponent({
     components: {
       Swiper,
