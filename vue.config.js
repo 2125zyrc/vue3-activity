@@ -74,11 +74,9 @@ module.exports = {
   css: {
       loaderOptions: {
         postcss: {
-          postcssOptions:{
-            plugins: [
-              pxtorem(px2remOpts)
-            ]
-          }
+          plugins: [
+            pxtorem(px2remOpts)
+          ]
       }
     }
   },
