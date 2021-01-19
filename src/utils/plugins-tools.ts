@@ -1,7 +1,7 @@
-import config,{ configIndex } from '../plugins-config/index' 
+import pluginsFile,{ PluginsKey } from '../plugins-config/index' 
 
-const getProps = (index:configIndex)=>{
-  return config[index].props
+const getProps = (index:PluginsKey)=>{
+  return pluginsFile[index].props
 }
 
 export {
