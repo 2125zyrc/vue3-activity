@@ -1,6 +1,12 @@
+---
+typora-copy-images-to: upload
+---
+
 ## 介绍
 
 vue3-activity是一个使用typescript + vue3搭建的预备用于用户自定义个性化页面的项目
+
+
 
 ## 创建项目
 
@@ -27,3 +33,7 @@ npm run dev
 - 使用rem适配不同终端
 
 
+
+## 展示图
+
+<img src="https://i.loli.net/2021/02/09/a5HL1ecSq3DRbkg.png" alt="Snipaste_2021-02-09_08-44-52" style="zoom:50%;" />
